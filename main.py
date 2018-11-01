@@ -49,7 +49,7 @@ class BlogContentRenderer(mistune.Renderer):
             return "" 
 
         lexer = get_lexer_by_name(lang, stripall=True)
-        formatter = HtmlFormatter(linenos=True, cssclass="source")
+        formatter = HtmlFormatter(linenos=False, cssclass="source")
         return highlight(code, lexer, formatter)
 
 
@@ -72,7 +72,7 @@ def render_articles():
             raw_html = markdown(f.read())
 
             # add the hex code
-            ARTICLE_DATA[-1]['hex_code'] = article_name
+            # ARTICLE_DATA[-1]['hex_code'] = article_name
 
 
         # apply the article jinja template to it

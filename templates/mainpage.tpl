@@ -10,13 +10,11 @@
 		#wrapper {
 			margin: 0 auto;
 			max-width: 700px;
-			border: 2px solid grey;
 			padding: 2px;
 		}
 
 		header#page-title {
 			margin: 2px;
-			border: 1px solid green;
 			display: flex
 		}
 
