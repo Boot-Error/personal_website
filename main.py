@@ -39,7 +39,7 @@ class BlogContentRenderer(mistune.Renderer):
         global ARTICLE_DATA
 
         if not lang:
-            return '\n<pre><code>%s</code></pre>' % mistune.escape(code)
+            return '\n<pre><code id="block_code">%s</code></pre>' % mistune.escape(code)
 
         if lang == "blogcfg":
             article_info = json.loads(code)
@@ -58,7 +58,13 @@ def render_articles():
         Renders the markdown content to raw html by mistune, then applied on a
         jinja template and exported to out/
     """
-    for md_filename in os.listdir('./content'): 
+    for md_filename in os.listdir('./content'):
+        
+        # skip draft files from processing
+        # draft files are named as <hexcode>_draft.md
+        if "draft" in md_filename:
+            continue
+
         with open("./content/" + md_filename, 'r') as f:
             
             # articles are named by their hex code GEEKY AF
@@ -90,8 +96,6 @@ def render_main_page():
     """
     with open('./out/index.html', 'w') as f:
         f.write(render_template('mainpage', 
-            # {"articles": sorted(
-            #     ARTICLE_DATA, key=lambda x: x['hex_code'], reverse=True)}))
             {'articles': ARTICLE_DATA}))
 
 # upload to boot-error.github.com

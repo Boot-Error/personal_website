@@ -1,4 +1,5 @@
 build:
+	cp -rvf static/ out/
 	python main.py
 
 clean:
