@@ -10,7 +10,7 @@ install:
     - rm -rf out/* || exit 0
 
 script:
-    - make build 
+    - make clean build 
 
 deploy:
     local_dir: out
