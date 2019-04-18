@@ -10,7 +10,7 @@ install:
     - rm -rf out/* || exit 0
 
 script:
-    - python main.py
+    - make build 
 
 deploy:
     local_dir: out
