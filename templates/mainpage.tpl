@@ -11,11 +11,10 @@
 		#wrapper {
 			margin: 0 auto;
 			max-width: 700px;
-			padding: 2px;
+			padding: 10px;
 		}
 
-		header#page-title {
-			margin: 2px;
+		div#page-title {
 			display: flex
 		}
 
