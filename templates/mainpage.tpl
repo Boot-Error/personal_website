@@ -50,6 +50,22 @@
 			padding-left: 10px;
 		}
 
+		#link-logo {
+			width: 0.32in;
+			height: 0.32in;
+		}
+
+		section#links {
+			padding: 20px;
+			display: flex;
+			flex-diriection: row;
+			justify-content: center;
+		}
+
+		a#link {
+			margin: 10px;
+		}
+
 	</style>
 </head>
 <body>
@@ -63,36 +79,39 @@
 		<div id="content-wrap">
 			<details>
 				<summary>ABOUT</summary>
-				<!-- <p>I code in Python, build web services, write scripts to automate my life.</p> -->
-				<!-- <p>I'm interested in field Cyber Security, Machine Learning, IoT.</p> -->
-				<!-- <p>I'm currently pursuing my B.Tech degree in Computer Science and Engineering from National Institute of Technology, Delhi.</p> -->
 				<p>Developer, Linux Enthusiast, Maker</p>
 				<p>Cyber Security, Machine Learning, Internet of Things</p>
 				<p>CS undergrad from National Institute of Technology, Delhi. Class of 2020</p>
 			</details>
 			<details>
-				<summary>PROJECTS</summary>
-				<section id="project-panel">
+				<summary>BLOG</summary>
+				<section id="article">
 					<ul>
-						<li></li>
-					</ul>	
+					{% for a in articles %}
+						<li><!-- {{ a.hex_code }} - -->
+							<a class="articleLink" href="/article/{{ a.hex_code }}.html">{{ a.title }}</a>
+							{% for t in a.tags %}
+								<span class='tag'>{{ t }}</span>
+							{% endfor %}
+						</li>
+					{% endfor %} 
+					</ul>
 				</section>
 			</details>
-			<!-- <details> -->
-			<!-- 	<summary>BLOG</summary> -->
-			<!-- 	<section id="article"> -->
-			<!-- 		<ul> -->
-			<!-- 		{% for a in articles %} -->
-			<!-- 			<li>{{ a.hex_code }} &#45;  -->
-			<!-- 				<a class="articleLink" href="/article/{{ a.hex_code }}.html">{{ a.title }}</a> -->
-			<!-- 				{% for t in a.tags %} -->
-			<!-- 					<span class='tag'>{{ t }}</span> -->
-			<!-- 				{% endfor %} -->
-			<!-- 			</li> -->
-			<!-- 		{% endfor %}  -->
-			<!-- 		</ul> -->
-			<!-- 	</section> -->
-			<!-- </details> -->
+		</div>
+		<div id="footer-link-wrap">
+			<section id="links">
+				<div id="link-icons">
+					<a id="link" href="https://github.com/Boot-Error"><svg id="link-logo"><image id="link-logo" xlink:href="/static/icons/github.svg"/></svg></a>
+					<a id="link" href="https://twitter.com/VigViggy"><svg id="link-logo"><image id="link-logo" xlink:href="/static/icons/twitter.svg"/></svg></a>
+					<a id="link" href="https://medium.com/@viggyvig"><svg id="link-logo"><image id="link-logo" xlink:href="/static/icons/medium.svg"/></svg></a>
+					<a id="link" href="https://www.linkedin.com/in/vighnesh-sk-4170b4127/"><svg id="link-logo"><image id="link-logo" xlink:href="/static/icons/linkedin.svg"/></svg></a>
+					<!-- <a href="https://github.com/Boot&#45;Error"><svg id="link&#45;logo"><image id="link&#45;logo" xlink:href="/static/icons/kaggle.svg"/></svg></a> -->
+					<!-- <a href="https://github.com/Boot&#45;Error"><svg id="link&#45;logo"><image id="link&#45;logo" xlink:href="/static/icons/discord.svg"/></svg></a> -->
+					<!-- <a href="https://github.com/Boot&#45;Error"><svg id="link&#45;logo"><image id="link&#45;logo" xlink:href="/static/icons/acm.svg"/></svg></a> -->
+					<!-- <a href="https://github.com/Boot&#45;Error"><svg id="link&#45;logo"><image id="link&#45;logo" xlink:href="/static/icons/dev&#45;dot&#45;to.svg"/></svg></a> -->
+				</div>	
+			</section>
 		</div>
 	</div>
 </body>
