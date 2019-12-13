@@ -73,7 +73,7 @@
 			<!-- <div id="profile&#45;image&#45;holder"> -->
 			<!-- 	<img id="profile&#45;image" src="/static/me_profile.jpg"></img> -->
 			<!-- </div> -->
-			<p>Hi, I'm Vighnesh, a passionate programmer who decided to engrave his work on the walls of the Internet.</p>
+			<p>Hi, I'm Vighnesh, in quest to master wizardly powers in the realm Computer Science.</p>
 		</div>
 		<div id="content-wrap">
 			<details>
