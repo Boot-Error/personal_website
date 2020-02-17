@@ -76,11 +76,12 @@
 			<p>Hi, I'm Vighnesh, in quest to master wizardly powers in the realm Computer Science.</p>
 		</div>
 		<div id="content-wrap">
-			<details>
+			<details open>
 				<summary>ABOUT</summary>
 				<p>Developer, Linux Enthusiast, Maker</p>
 				<p>Cyber Security, Machine Learning, Internet of Things</p>
 				<p>CS undergrad from National Institute of Technology, Delhi. Class of 2020</p>
+				<p>Co founder of <a href="https://cybersecnitd.github.io">CybersecNITD</a>. I write stuff there too.<p>
 			</details>
 			<details>
 				<summary>BLOG</summary>
